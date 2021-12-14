@@ -1,0 +1,36 @@
+:root {
+  --blue-100: #96B9FD;
+  --blue-200: #7BA4FC;
+  --blue-300: #5081FB;
+  --dark-blue: #051D3B;
+
+  --dark-gray: #141414;
+}
+
+body {
+  background-color: var(--dark-blue);
+  color: white;
+  padding: 2rem;
+
+  display: grid;
+  grid-template-areas:
+    'logo search author'
+    'menu main main';
+  grid-template-columns: 1fr 55% 1fr;
+  gap: 2.5rem;
+}
+
+.header__logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  display: block;
+}
+
+.header__author {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}

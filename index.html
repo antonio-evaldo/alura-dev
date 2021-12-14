@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono&display=swap"
+    rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/9302cfd3da.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="global.css">
+
+  <link rel="stylesheet" href="components/main-field.css">
+  <link rel="stylesheet" href="components/author.css">
+  <link rel="stylesheet" href="components/spaced-title.css">
+  <link rel="stylesheet" href="components/menu.css">
+  <link rel="stylesheet" href="components/code-editor.css">
+  <link rel="stylesheet" href="components/button.css">
+
+  <link rel="stylesheet" href="create-project.css">
+
+  <title>All Dev</title>
+</head>
+
+<body>
+  <div class="header__logo-wrapper">
+    <a href="index.html">
+      <img src="assets/images/logo.svg" alt="Logo Alura Dev" class="header__logo">
+    </a>
+  </div>
+
+  <div class="header__search-wrapper">
+    <input type="search" class="main-field" placeholder="Busque por algo">
+  </div>
+
+  <div class="header__author">
+    <a href="#">
+      <div class="author">
+        <img src="assets/images/author.svg" alt="Foto do autor">
+        <span>Harry</span>
+      </div>
+    </a>
+  </div>
+
+  <aside class="menu">
+    <h1 class="spaced-title">Menu</h1>
+
+    <a href="index.html" class="menu-item">
+      <div class="icon-wrapper">
+        <i class="fas fa-code"></i>
+      </div>
+
+      <span>Editor de código</span>
+    </a>
+
+    <a href="community.html" class="menu-item menu-item_inactive">
+      <div class="icon-wrapper">
+        <i class="fas fa-users"></i>
+      </div>
+
+      <span>Comunidade</span>
+    </a>
+  </aside>
+
+  <div class="code-editor-block">
+    <div class="code-editor-wrapper">
+      <div class="code-editor">
+        <div class="mac-buttons">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <textarea class="code" rows="13" spellcheck="false" autofocus>const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+
+const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+
+const unfold = (f, seed) => {
+  const go = (f, seed, acc) => {
+    const res = f(seed)
+    return res ? go(f, res[1], acc.concat([res[0]])) : acc
+  }
+  return go(f, seed, [])
+}</textarea>
+
+      </div>
+    </div>
+
+    <button class="button button_ghost">
+      Visualizar com o highlight
+    </button>
+  </div>
+
+  <aside class="project-options">
+    <form action="">
+      <div class="details">
+        <h2 class="spaced-title">Seu projeto</h2>
+
+        <input class="main-field details__input" type="text" name="" id="" placeholder="Nome do seu projeto">
+
+        <textarea class="main-field details__textarea" name="" id="" rows="2"
+          placeholder="Descrição do seu projeto"></textarea>
+      </div>
+
+      <div class="customization">
+        <h2 class="spaced-title">Personalização</h2>
+
+        <select class="main-field main-field_select" name="" id="">
+          <option value="">Javascript</option>
+          <option value="">Python</option>
+          <option value="">Java</option>
+        </select>
+
+        <input type="color" value="#6BD1FF" name="" id="">
+      </div>
+
+      <button type="button" class="button button_filled">Salvar projeto</button>
+    </form>
+  </aside>
+</body>
+
+<script>
+  const active = document.querySelector('.menu-item:not(.menu-item_inactive)');
+
+  active.addEventListener('click', event => {
+    event.preventDefault();
+  });
+</script>
+
+</html>

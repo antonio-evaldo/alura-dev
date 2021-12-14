@@ -1,0 +1,45 @@
+.button {
+  width: 100%;
+  height: 56px;
+  border-radius: 8px;
+  outline: 0;
+  border: 0;
+
+  transition: background-color .2s;
+}
+
+.button_ghost {
+  color: white;
+  background: rgba(80, 129, 251, 0.08);
+}
+
+.button_ghost:hover {
+  background: rgba(80, 129, 251, 0.16);
+}
+
+.button_ghost:focus {
+  background: rgba(80, 129, 251, 0.24);
+}
+
+.button_ghost:active {
+  background: rgba(80, 129, 251, 0.16);
+  border: 4px solid rgba(80, 129, 251, 0.24);
+}
+
+.button_filled {
+  color: #051D3B;
+  background: #5081FB;
+}
+
+.button_filled:hover {
+  background: #7BA4FC;
+}
+
+.button_filled:focus {
+  background: #96B9FD;
+}
+
+.button_filled:active {
+  background: #7BA4FC;
+  border: 4px solid rgba(80, 129, 251, 0.72);
+}

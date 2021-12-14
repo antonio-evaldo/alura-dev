@@ -1,0 +1,24 @@
+.author {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  border-radius: 8px;
+
+  transition: background-color .2s;
+}
+
+.author:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.author > span {
+  margin-left: 0.5rem;
+}
+
+.author_sm {
+  padding: 0.5rem;
+}
+
+.author_sm > img {
+  height: 24px;
+}

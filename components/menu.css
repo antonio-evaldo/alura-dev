@@ -1,0 +1,41 @@
+.menu-item {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 1rem;
+  cursor: initial;
+}
+
+.menu-item > .icon-wrapper {
+  margin-right: 1rem;
+  height: 3rem;
+  width: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  border-radius: 1rem;
+  background: var(--blue-300);
+}
+
+.menu-item_inactive {
+  cursor: pointer;
+}
+
+.menu-item_inactive > .icon-wrapper {
+  background: #5081FB29;
+  transition: .2s;
+}
+
+.menu-item_inactive > .icon-wrapper > i,
+.menu-item_inactive > span {
+  opacity: 0.56;
+  transition: .2s;
+}
+
+.menu-item_inactive:hover > .icon-wrapper {
+  background: #5081FBA3;
+}
+
+.menu-item_inactive:hover > .icon-wrapper > i,
+.menu-item_inactive:hover > span {
+  opacity: 0.72;
+}
