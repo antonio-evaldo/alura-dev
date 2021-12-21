@@ -36,17 +36,22 @@
   background: #27C93F;
 }
 
+.code-wrapper {
+  cursor: text;
+  min-height: 20px;
+}
+
 .code {
   font-family: Roboto Mono;
   font-size: 0.875rem;
   line-height: 18px;
-  width: 100%;
   background: var(--dark-gray);
-  color: white;
 
   outline: none;
-  border: none;
-  resize: none;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  cursor: text;
+  padding: 0 !important;
 }
 
 .code-editor-wrapper_sm {
