@@ -29,3 +29,10 @@ hljsButton.addEventListener('click', () => {
 
   hljs.highlightElement(codeElement);
 });
+
+const inputColor = document.querySelector('[inputColor]');
+const codeEditorWrapper = document.querySelector('[codeEditorWrapper]');
+
+inputColor.addEventListener('input', event => {
+  codeEditorWrapper.style.backgroundColor = event.target.value;
+});
