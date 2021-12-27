@@ -70,78 +70,13 @@
     </a>
   </aside>
 
-  <div class="community">
-    <div class="project-card">
-
-      <div class="code-editor-wrapper code-editor-wrapper_sm">
-        <a href="#">
-          <div class="code-editor code-editor_sm">
-            <div class="mac-buttons mac-buttons_sm">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-
-            <pre><code class="code code_sm language-js" aria-label="Editor de código">const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
-
-const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
-
-const unfold = (f, seed) => {
-  const go = (f, seed, acc) => {
-    const res = f(seed)
-    return res ? go(f, res[1], acc.concat([res[0]])) : acc
-  }
-  return go(f, seed, [])
-}</code></pre>
-            
-
-          </div>
-        </a>
-      </div>
-
-      <div class="card-content">
-        <a href="#">
-          <h2>Título do projeto</h2>
-        </a>
-        <p>Essa é a descrição do meu projeto.</p>
-      </div>
-
-      <div class="card-actions">
-        <div class="actions">
-          <div class="action_button">
-            <i class="fas fa-comment"></i>
-            <span>9</span>
-          </div>
-          <div class="action_button">
-            <i class="fas fa-heart"></i>
-            <span>9</span>
-          </div>
-        </div>
-
-        <a href="#" class="author author_sm">
-          <img src="assets/images/author.svg" alt="Foto do autor">
-          <span>@Harry</span>
-        </a>
-      </div>
-
-    </div>
-
-    <div class="project-card">
-
-    </div>
+  <div class="community" community>
+    
   </div>
 </body>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
 
-<script src="community.js"></script>
-
-<script>
-  const active = document.querySelector('.menu-item:not(.menu-item_inactive)');
-
-  active.addEventListener('click', event => {
-    event.preventDefault();
-  });
-</script>
+<script type="module" src="js/community.js"></script>
 
 </html>

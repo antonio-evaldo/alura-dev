@@ -80,7 +80,8 @@
         </div>
 
         <div class="code-wrapper" code-wrapper>
-          <code code class="code" contenteditable="true" aria-label="Editor de código">// Digite seu código aqui...</code>
+          <code code class="code" contenteditable="true"
+            aria-label="Editor de código">// Digite seu código aqui...</code>
         </div>
 
       </div>
@@ -92,26 +93,26 @@
   </div>
 
   <aside class="project-options">
-    <form action="">
+    <form form>
       <div class="details">
         <h2 class="spaced-title">Seu projeto</h2>
 
-        <input class="main-field details__input" type="text" name="" id="" placeholder="Nome do seu projeto">
+        <input class="main-field details__input" type="text" id="title" placeholder="Nome do seu projeto">
 
-        <textarea class="main-field details__textarea" name="" id="" rows="2"
+        <textarea class="main-field details__textarea" id="description" rows="2"
           placeholder="Descrição do seu projeto"></textarea>
       </div>
 
       <div class="customization">
         <h2 class="spaced-title">Personalização</h2>
 
-        <select language-options class="main-field main-field_select" name="" id="">
+        <select language-options class="main-field main-field_select" id="language">
           <option value="html">HTML</option>
           <option value="css">CSS</option>
           <option selected value="js">Javascript</option>
         </select>
 
-        <input inputColor type="color" value="#6BD1FF" name="" id="">
+        <input inputColor type="color" value="#6BD1FF" id="color">
       </div>
 
       <button type="submit" class="button button_filled">Salvar projeto</button>
@@ -121,6 +122,6 @@
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
 
-<script src="create-project.js"></script>
+<script type="module" src="js/create-project.js"></script>
 
 </html>
