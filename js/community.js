@@ -1,35 +1,24 @@
-import { $, projects } from './global.js';
+import { $ } from './global.js';
+import { getProjects } from './projects.js';
 
-// const template = $('template');
+const projects = getProjects();
 
 projects.forEach((project, key) => {
   const community = $('[community]');
 
-  // const clone = template.content.cloneNode(true);
-
-  // clone.querySelector('[project-title]').textContent = project.title;
-  // clone.querySelector('[project-description]').textContent = project.description;
-  // clone.querySelector('[code]').textContent = project.code;
-
-  // clone.querySelector('[code]').classList.add(`language-${project.language}`);
-
-  // clone.querySelector('[code-editor-wrapper]').style.backgroundColor = project.color;
-
-  // community.appendChild(clone);
-
-  const projectCardHTML = /* HTML */ `
+  const projectCardHTML = (project, small = false) => /* HTML */ `
     <div class="project-card" project-card>
-      <div style="background-color: ${project.color}" class="code-editor-wrapper code-editor-wrapper_sm">
+      <div style="background-color: ${project.color}" class="code-editor-wrapper ${small && 'code-editor-wrapper_sm'}">
         <a href="#">
-          <div class="code-editor code-editor_sm">
-            <div class="mac-buttons mac-buttons_sm">
+          <div class="code-editor ${small && 'code-editor_sm'}">
+            <div class="mac-buttons ${small && 'mac-buttons_sm'}">
               <span></span>
               <span></span>
               <span></span>
             </div>
 
             <div class="code-wrapper" code-wrapper>
-              <code code class="code code_sm language-${project.language}" aria-label="Editor de código">${project.code}</code>
+              <code code class="code ${small && 'code_sm'} language-${project.language}" aria-label="Editor de código">${project.code}</code>
             </div>
 
           </div>
@@ -63,7 +52,7 @@ projects.forEach((project, key) => {
     </div>
   `;
 
-  community.innerHTML += projectCardHTML;
+  community.innerHTML += projectCardHTML(project, true);
 
   const addedCode = community.querySelectorAll('[code]')[key];
   hljs.highlightElement(addedCode);

@@ -45,6 +45,7 @@
   font-size: 0.875rem;
   line-height: 18px;
   background: var(--dark-gray);
+  word-break: break-word;
 
   outline: none;
   overflow-x: auto;

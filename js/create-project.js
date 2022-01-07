@@ -1,4 +1,5 @@
-import { $, addProject } from './global.js';
+import { $ } from './global.js';
+import { addProject } from './projects.js';
 
 const hljsButton = $('[highlight-button]');
 const codeWrapper = $('[code-wrapper]');
@@ -36,15 +37,14 @@ const form = $('[form]');
 form.addEventListener('submit', event => {
   event.preventDefault();
 
-  const project = {
-    title: form.title.value,
-    description: form.description.value,
-    language: form.language.value,
-    color: form.color.value,
-    code: codeWrapper.innerText,
-  }
-
-  addProject(project);
+  addProject(
+    form.title.value,
+    form.description.value,
+    form.language.value,
+    form.color.value,
+    codeWrapper.innerText,
+  );
+  
   alert('Projeto adicionado com sucesso!');
   window.location.href = '../community.html';
 });
