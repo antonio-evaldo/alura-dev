@@ -1,3 +1,7 @@
+.menu {
+  width: var(--aside-width);
+}
+
 .menu-item {
   display: flex;
   align-items: center;

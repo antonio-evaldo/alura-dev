@@ -5,32 +5,21 @@
   --dark-blue: #051D3B;
 
   --dark-gray: #141414;
+  --aside-width: calc(272vw * 100 / 1440);
 }
 
 body {
   background-color: var(--dark-blue);
   color: white;
   padding: 2rem;
+}
 
+.header {
+  margin-bottom: 2.5rem;
+}
+
+.main {
   display: grid;
-  grid-template-areas:
-    'logo search author'
-    'menu main main';
-  grid-template-columns: 1fr 55% 1fr;
-  gap: 2.5rem;
-}
-
-.header__logo-wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.header__logo {
-  display: block;
-}
-
-.header__author {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  column-gap: 2.5rem;
+  grid-template-columns: var(--aside-width) 1fr;
 }

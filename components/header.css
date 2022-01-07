@@ -1,0 +1,20 @@
+.header {
+  display: grid;
+  column-gap: 2.5rem;
+  grid-template-columns: var(--aside-width) 1fr var(--aside-width);
+}
+
+.header__logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  display: block;
+}
+
+.header__author {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}

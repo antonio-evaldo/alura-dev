@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="global.css">
 
+  <link rel="stylesheet" href="components/header.css">
   <link rel="stylesheet" href="components/main-field.css">
   <link rel="stylesheet" href="components/author.css">
   <link rel="stylesheet" href="components/spaced-title.css">
@@ -31,48 +32,53 @@
 </head>
 
 <body>
-  <div class="header__logo-wrapper">
-    <a href="index.html">
-      <img src="assets/images/logo.svg" alt="Logo Alura Dev" class="header__logo">
-    </a>
-  </div>
+  <header class="header">
+    <div class="header__logo-wrapper">
+      <a href="index.html">
+        <img src="assets/images/logo.svg" alt="Logo Alura Dev" class="header__logo">
+      </a>
+    </div>
 
-  <div class="search-wrapper">
     <input type="search" class="main-field" placeholder="Busque por algo">
-  </div>
 
-  <div class="header__author">
-    <a href="#">
-      <div class="author">
-        <img src="assets/images/author.svg" alt="Foto do autor">
-        <span>Harry</span>
-      </div>
-    </a>
-  </div>
+    <div class="header__author">
+      <a href="#">
+        <div class="author">
+          <img src="assets/images/author.svg" alt="Foto do autor">
+          <span>Harry</span>
+        </div>
+      </a>
+    </div>
+  </header>
 
-  <aside class="menu">
-    <h1 class="spaced-title">Menu</h1>
+  <main class="main">
 
-    <a href="index.html" class="menu-item menu-item_inactive">
-      <div class="icon-wrapper">
-        <i class="fas fa-code"></i>
-      </div>
+    <aside class="menu">
+      <h1 class="spaced-title">Menu</h1>
 
-      <span>Editor de código</span>
-    </a>
+      <a href="index.html" class="menu-item menu-item_inactive">
+        <div class="icon-wrapper">
+          <i class="fas fa-code"></i>
+        </div>
 
-    <a href="community.html" class="menu-item">
-      <div class="icon-wrapper">
-        <i class="fas fa-users"></i>
-      </div>
+        <span>Editor de código</span>
+      </a>
 
-      <span>Comunidade</span>
-    </a>
-  </aside>
+      <a href="community.html" class="menu-item">
+        <div class="icon-wrapper">
+          <i class="fas fa-users"></i>
+        </div>
 
-  <div class="community" community>
-    
-  </div>
+        <span>Comunidade</span>
+      </a>
+    </aside>
+
+    <div class="main-content">
+      <div class="community" community>
+    </div>
+
+    </div>
+  </main>
 </body>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>

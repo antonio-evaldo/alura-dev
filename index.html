@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="global.css">
 
+  <link rel="stylesheet" href="components/header.css">
   <link rel="stylesheet" href="components/main-field.css">
   <link rel="stylesheet" href="components/author.css">
   <link rel="stylesheet" href="components/spaced-title.css">
@@ -31,93 +32,99 @@
 </head>
 
 <body>
-  <div class="header__logo-wrapper">
-    <a href="index.html">
-      <img src="assets/images/logo.svg" alt="Logo Alura Dev" class="header__logo">
-    </a>
-  </div>
-
-  <div class="header__search-wrapper">
-    <input type="search" class="main-field" placeholder="Busque por algo">
-  </div>
-
-  <div class="header__author">
-    <a href="#">
-      <div class="author">
-        <img src="assets/images/author.svg" alt="Foto do autor">
-        <span>Harry</span>
-      </div>
-    </a>
-  </div>
-
-  <aside class="menu">
-    <h1 class="spaced-title">Menu</h1>
-
-    <a href="index.html" class="menu-item">
-      <div class="icon-wrapper">
-        <i class="fas fa-code"></i>
-      </div>
-
-      <span>Editor de código</span>
-    </a>
-
-    <a href="community.html" class="menu-item menu-item_inactive">
-      <div class="icon-wrapper">
-        <i class="fas fa-users"></i>
-      </div>
-
-      <span>Comunidade</span>
-    </a>
-  </aside>
-
-  <div class="code-editor-block">
-    <div codeEditorWrapper class="code-editor-wrapper">
-      <div class="code-editor">
-        <div class="mac-buttons">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-
-        <div class="code-wrapper" code-wrapper>
-          <code code class="code" contenteditable="true"
-            aria-label="Editor de código">// Digite seu código aqui...</code>
-        </div>
-
-      </div>
+  <header class="header">
+    <div class="header__logo-wrapper">
+      <a href="index.html">
+        <img src="assets/images/logo.svg" alt="Logo Alura Dev" class="header__logo">
+      </a>
     </div>
 
-    <button highlight-button class="button button_ghost">
-      Visualizar com o highlight
-    </button>
-  </div>
+    <input type="search" class="main-field" placeholder="Busque por algo">
 
-  <aside class="project-options">
-    <form form>
-      <div class="details">
-        <h2 class="spaced-title">Seu projeto</h2>
+    <div class="header__author">
+      <a href="#">
+        <div class="author">
+          <img src="assets/images/author.svg" alt="Foto do autor">
+          <span>Harry</span>
+        </div>
+      </a>
+    </div>
+  </header>
 
-        <input class="main-field details__input" type="text" id="title" placeholder="Nome do seu projeto">
+  <main class="main">
+    <aside class="menu">
+      <h1 class="spaced-title">Menu</h1>
 
-        <textarea class="main-field details__textarea" id="description" rows="2"
-          placeholder="Descrição do seu projeto"></textarea>
+      <a href="index.html" class="menu-item">
+        <div class="icon-wrapper">
+          <i class="fas fa-code"></i>
+        </div>
+
+        <span>Editor de código</span>
+      </a>
+
+      <a href="community.html" class="menu-item menu-item_inactive">
+        <div class="icon-wrapper">
+          <i class="fas fa-users"></i>
+        </div>
+
+        <span>Comunidade</span>
+      </a>
+    </aside>
+
+    <div class="main-content">
+      <div class="code-editor-block">
+        <div codeEditorWrapper class="code-editor-wrapper">
+          <div class="code-editor">
+            <div class="mac-buttons">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="code-wrapper" code-wrapper>
+              <code code class="code" contenteditable="true"
+                aria-label="Editor de código">// Digite seu código aqui...</code>
+            </div>
+
+          </div>
+        </div>
+
+        <button highlight-button class="button button_ghost">
+          Visualizar com o highlight
+        </button>
       </div>
 
-      <div class="customization">
-        <h2 class="spaced-title">Personalização</h2>
+      <aside class="project-options">
+        <form form>
+          <div class="details">
+            <h2 class="spaced-title">Seu projeto</h2>
 
-        <select language-options class="main-field main-field_select" id="language">
-          <option value="html">HTML</option>
-          <option value="css">CSS</option>
-          <option selected value="js">Javascript</option>
-        </select>
+            <input class="main-field details__input" type="text" id="title" placeholder="Nome do seu projeto">
 
-        <input inputColor type="color" value="#6BD1FF" id="color">
-      </div>
+            <textarea class="main-field details__textarea" id="description" rows="2"
+              placeholder="Descrição do seu projeto"></textarea>
+          </div>
 
-      <button type="submit" class="button button_filled">Salvar projeto</button>
-    </form>
-  </aside>
+          <div class="customization">
+            <h2 class="spaced-title">Personalização</h2>
+
+            <select language-options class="main-field main-field_select" id="language">
+              <option value="html">HTML</option>
+              <option value="css">CSS</option>
+              <option selected value="js">Javascript</option>
+            </select>
+
+            <input inputColor type="color" value="#6BD1FF" id="color">
+          </div>
+
+          <button type="submit" class="button button_filled">Salvar projeto</button>
+        </form>
+      </aside>
+    </div>
+
+  </main>
+
 </body>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>

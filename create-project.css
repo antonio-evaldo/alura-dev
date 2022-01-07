@@ -1,3 +1,9 @@
+.main-content {
+  display: grid;
+  column-gap: 2.5rem;
+  grid-template-columns: 1fr var(--aside-width);
+}
+
 .code-editor-block > .code-editor-wrapper {
   margin-bottom: 2rem;
 }
