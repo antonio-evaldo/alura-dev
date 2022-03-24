@@ -1,6 +1,9 @@
 .project-card {
   background: rgba(0, 0, 0, 0.16);
   border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .card-content {

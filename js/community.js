@@ -8,9 +8,9 @@ projects.forEach((project, key) => {
 
   const projectCardHTML = (project, small = false) => /* HTML */ `
     <div class="project-card" project-card>
-      <div style="background-color: ${project.color}" class="code-editor-wrapper ${small && 'code-editor-wrapper_sm'}">
+      <div style="background-color: ${project.color}" class="code-editor-wrapper code-editor-wrapper_card ${small && 'code-editor-wrapper_sm'}">
         <a href="#">
-          <div class="code-editor ${small && 'code-editor_sm'}">
+          <div class="code-editor code-editor_card ${small && 'code-editor_sm'}">
             <div class="mac-buttons ${small && 'mac-buttons_sm'}">
               <span></span>
               <span></span>
